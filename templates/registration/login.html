@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load crispy_forms_filters %}
 
 {% block content %}
 <h1>{{ is_registration|yesno:"Registration,Logging in" }}</h1>
@@ -7,7 +8,7 @@
   <!-- form copied from UserCreationForm html edited-   -->
     <form style="width: max-content; padding: 30px; background-color: blanchedalmond;" method="post" action="">
         {% csrf_token %}
-        {{form.as_p}}
+        {{form|crispy}}
         <button type="submit" class="btn btn-primary btn-block">{{ is_registration|yesno:"Sign up,Log in" }}</button>
     </form>
 </div>

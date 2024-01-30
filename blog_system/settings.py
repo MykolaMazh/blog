@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    'crispy_forms',
     "blog.apps.BlogConfig",
     "debug_toolbar",
 ]
@@ -139,3 +140,5 @@ INTERNAL_IPS = [
 ]
 
 LOGIN_REDIRECT_URL = "blog:index"
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
